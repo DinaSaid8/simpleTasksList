@@ -14,7 +14,7 @@ const Login = ({setUser}) => {
       <div
         className="bg-darker flex items-center 
           justify-center flex-col px-6 xl:w-[30%] 
-      lg:w-[40%] md:w-[50%] w-[70%] h-[80vh] rounded-3xl"
+      lg:w-[40%] md:w-[50%] sm:w-[70%]  w-[90%] h-[80vh] rounded-3xl"
       >
         <input
           placeholder="User Name"
@@ -26,7 +26,7 @@ const Login = ({setUser}) => {
             setUserName(e.target.value);
           }}
           className="bg-darkest placeholder:text-gray text-light 
-           p-4 rounded-2xl mb-4 text-xl"
+           p-4 rounded-2xl mb-4 text-xl w-full"
         />
         <input
           placeholder="password"
@@ -38,7 +38,7 @@ const Login = ({setUser}) => {
             setPassword(e.target.value);
           }}
           className="bg-darkest placeholder:text-gray text-light 
-          p-4 rounded-2xl mb-4 text-xl"
+          p-4 rounded-2xl mb-4 text-xl w-full"
         />
         <button
           type="submit"

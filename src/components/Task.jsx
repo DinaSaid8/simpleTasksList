@@ -26,11 +26,11 @@ const Task = ({ task, statusOptions, onEdit, onDelete }) => {
   return (
     <div
       className={`bg-darkest rounded-2xl p-4 mb-4 w-full  ${
-        !editing && "grid grid-cols-3"
+        !editing && "grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3"
       } `}
     >
       {editing ? (
-        <form onSubmit={handleSubmit} className="w-full grid grid-cols-3 gap-3">
+        <form onSubmit={handleSubmit} className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3">
           <select
             className="bg-white px-2 py-1 rounded-md font-bold capitalize inline-block "
             value={status}
@@ -61,8 +61,8 @@ const Task = ({ task, statusOptions, onEdit, onDelete }) => {
         </form>
       ) : (
         <>
-          <span className={`px-3 py-1 rounded w-fit text-white ${status.toLowerCase()}`}>{status}</span>
-          <p className="text-light">{description}</p>
+          <span className={`px-3 py-1 rounded w-fit h-fit text-white ${status.toLowerCase()}`}>{status}</span>
+          <p className="text-light break-words">{description}</p>
           <div className="flex items-center justify-end">
             <button
               onClick={handleEdit}

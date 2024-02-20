@@ -166,7 +166,7 @@ const TasksList = () => {
       {tasks.length > 0 && (
         <main>
           {tasks.length > 1 && (
-            <div className="flex items-center justify-end gap-3 px-3">
+            <div className="flex flex-wrap items-center justify-end gap-3 px-3">
               <select
                 onChange={(e) => {
                   setStatusFilter(e.target.value);
